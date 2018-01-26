@@ -1,0 +1,2041 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"finite",
+				"finite_state_system.h\t(main.cpp)"
+			],
+			[
+				"tran",
+				"transition_away"
+			],
+			[
+				"entry",
+				"_entry_state"
+			],
+			[
+				"target",
+				"_target_state"
+			],
+			[
+				"add",
+				"add_state\t(finite_state_system.h)"
+			],
+			[
+				"funtype",
+				"funtype_move"
+			],
+			[
+				"unorde",
+				"unordered_map\tstandard header (since c++11)"
+			],
+			[
+				"raster",
+				"rasterSize"
+			],
+			[
+				"CMAKE_CURRENT",
+				"CMAKE_CURRENT_SOURCE_DIR\tbuiltin"
+			],
+			[
+				"ApplyC",
+				"ApplyCameraShake\t(GameController.cs)"
+			],
+			[
+				"Apply",
+				"ApplyCameraShake(float amount)\tvoid"
+			],
+			[
+				"time",
+				"timeFromMaxToMin"
+			],
+			[
+				"trauma",
+				"traumaDrainRate"
+			],
+			[
+				"Camera",
+				"CameraShake"
+			],
+			[
+				"Game",
+				"GameController\t(GameController.cs)"
+			],
+			[
+				"base",
+				"baseRotation"
+			],
+			[
+				"current",
+				"currentPos"
+			],
+			[
+				"Recal",
+				"RecalculateExitDict"
+			],
+			[
+				"far",
+				"farthestPoint"
+			],
+			[
+				"Seriali",
+				"SerializeField"
+			],
+			[
+				"vec",
+				"Vec3List"
+			],
+			[
+				"exit",
+				"exitDict"
+			],
+			[
+				"calc",
+				"calculateMetadata"
+			],
+			[
+				"farth",
+				"farthestPoint"
+			],
+			[
+				"orig",
+				"origSize"
+			],
+			[
+				"Check",
+				"CheckValidity"
+			],
+			[
+				"Vec",
+				"Vector3Int"
+			],
+			[
+				"ExitDir",
+				"ExitDirection\t(Exit.cs)"
+			],
+			[
+				"Seri",
+				"SerializeField"
+			],
+			[
+				"cWidth",
+				"cWidth"
+			],
+			[
+				"CHUNK",
+				"CHUNK_SIZE"
+			],
+			[
+				"cWidt",
+				"cWidthProp"
+			],
+			[
+				"all",
+				"allOriginsAboveZero"
+			],
+			[
+				"min",
+				"minOrigin"
+			],
+			[
+				"print",
+				"printStrings"
+			],
+			[
+				"key",
+				"keyString"
+			],
+			[
+				"front",
+				"frontString"
+			],
+			[
+				"Build",
+				"BuildMainGrid"
+			],
+			[
+				"outpu",
+				"imgOutputCount"
+			],
+			[
+				"ILog",
+				"ILogHandler"
+			],
+			[
+				"expected",
+				"expectedHeight"
+			],
+			[
+				"offset",
+				"offsety"
+			],
+			[
+				"origH",
+				"origWidth"
+			],
+			[
+				"oriG",
+				"origWidth"
+			],
+			[
+				"Exit",
+				"ExitDir"
+			],
+			[
+				"truepo",
+				"truePosX"
+			],
+			[
+				"exits",
+				"exitsList"
+			],
+			[
+				"first",
+				"firstIndex"
+			],
+			[
+				"legl",
+				"legalChunks"
+			],
+			[
+				"ExitD",
+				"ExitDirToop"
+			],
+			[
+				"chunkedAd",
+				"chunkedAdjNodes"
+			],
+			[
+				"calculate",
+				"CalculateDistance"
+			],
+			[
+				"otherEx",
+				"otherExit"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"Calc",
+				"CalcNewPos"
+			],
+			[
+				"loop",
+				"loopTied"
+			],
+			[
+				"pos",
+				"posTup"
+			],
+			[
+				"chunk",
+				"chunk_exit\t(dungeon_generator.py)"
+			],
+			[
+				"one",
+				"oneDirection"
+			],
+			[
+				"true",
+				"trueLegalChunks"
+			],
+			[
+				"adjExi",
+				"adjExits"
+			],
+			[
+				"chosen",
+				"chosenChunk"
+			],
+			[
+				"chunked",
+				"chunkedAdjs"
+			],
+			[
+				"chunke",
+				"chunkedAdjs"
+			],
+			[
+				"unchun",
+				"unchunkedDirs"
+			],
+			[
+				"Tile",
+				"TileType\t(Room.cs)"
+			],
+			[
+				"P",
+				"ProcGenConstants"
+			],
+			[
+				"Pro",
+				"ProcGenConstants"
+			],
+			[
+				"LWG",
+				"LWG.Tuple"
+			],
+			[
+				"texture",
+				"Texture2D"
+			],
+			[
+				"expo",
+				"explored"
+			],
+			[
+				"Nearly",
+				"NearlySameColor\t(Room.cs)"
+			],
+			[
+				"truePos",
+				"truePosY"
+			],
+			[
+				"truePo",
+				"truePosX"
+			],
+			[
+				"color",
+				"colorNothing"
+			],
+			[
+				"some",
+				"someComponent"
+			],
+			[
+				"legal",
+				"legalChunks"
+			],
+			[
+				"curren",
+				"currentAttack\t(PlayerController.cs)"
+			],
+			[
+				"TARGET",
+				"TARGET_ATTACKABLE"
+			],
+			[
+				"attack",
+				"attackRadius"
+			],
+			[
+				"GetSen",
+				"GetSensedObject\t(BasicSensor2D.cs)"
+			],
+			[
+				"COLL_MASK",
+				"COLL_MASK_DESTRO"
+			],
+			[
+				"COLL",
+				"COLL_MASK_DESTRO\t(GameConstants.cs)"
+			],
+			[
+				"type",
+				"typeof\t(Controller2D.cs)"
+			],
+			[
+				"Obstacl",
+				"ObstaclesUp\t(RaycastController.cs)"
+			],
+			[
+				"Obsta",
+				"ObstaclesUp"
+			],
+			[
+				"cool",
+				"coollamb"
+			],
+			[
+				"Implem",
+				"ImplementIdle"
+			],
+			[
+				"hitStun",
+				"hitStunFrames"
+			],
+			[
+				"light",
+				"lightAttackFrames_B"
+			],
+			[
+				"ssJump",
+				"ssJumpSquat"
+			],
+			[
+				"Force",
+				"FORCE_EXIT"
+			],
+			[
+				"hit",
+				"hitstun"
+			],
+			[
+				"GAMEC",
+				"GameConstants\t(PlayerController.cs)"
+			],
+			[
+				"currenTe",
+				"currentTime"
+			],
+			[
+				"TimerState",
+				"TimerStateInfo\t(ScrubController.cs)"
+			],
+			[
+				"ATTACK",
+				"ATTACK"
+			],
+			[
+				"APPRO",
+				"APPROACH_TARGET"
+			],
+			[
+				"App",
+				"APPROACH_TARGET"
+			],
+			[
+				"APP",
+				"APPROACH_PLAYER"
+			],
+			[
+				"AttackRe",
+				"AttackRecieverHandler"
+			],
+			[
+				"sensed",
+				"sensedObjects"
+			],
+			[
+				"sense",
+				"sensedObjects"
+			],
+			[
+				"sens",
+				"sensingMask"
+			],
+			[
+				"update",
+				"updatePeriod"
+			],
+			[
+				"Attack",
+				"AttackLibrary\t(AIController.cs)"
+			],
+			[
+				"fac",
+				"facing_right"
+			],
+			[
+				"DASH_WALL",
+				"DASH_WALL_LEAP"
+			],
+			[
+				"DASH",
+				"DASH_JUMP"
+			],
+			[
+				"UPAT",
+				"UP_ATTACK"
+			],
+			[
+				"DJ_WALK",
+				"DJ_WALK_MONSTER"
+			],
+			[
+				"DJ",
+				"DJWalkMonster"
+			],
+			[
+				"UP",
+				"UP_ATTACK"
+			],
+			[
+				"GROUND",
+				"GROUND_UPATTACK"
+			],
+			[
+				"AIR_",
+				"AIR_DWNATTACK"
+			],
+			[
+				"AIR",
+				"AIR_UPATTACK"
+			],
+			[
+				"GROUDN",
+				"GROUND_UPATTACK"
+			],
+			[
+				"state",
+				"stateSystem"
+			],
+			[
+				"Spawn",
+				"SpawnEnchantment"
+			],
+			[
+				"en",
+				"enchantmentHolder"
+			],
+			[
+				"per",
+				"period"
+			],
+			[
+				"GameOBje",
+				"GameObject"
+			],
+			[
+				"item",
+				"itemPool"
+			],
+			[
+				"Clear",
+				"ClearAllEffects\t(EnchEffectStorage.cs)"
+			],
+			[
+				"al",
+				"allEnchants"
+			],
+			[
+				"ClearAll",
+				"ClearAllEnchantments\t(Enchantments.cs)"
+			],
+			[
+				"ClearE",
+				"ClearAllEffects\t(EnchEffectStorage.cs)"
+			],
+			[
+				"EnchEffect",
+				"EnchEffectStorage\t(EnchEffectStorage.cs)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 1162,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fsm/enum_class_bitmasks.h",
+			"settings":
+			{
+				"buffer_size": 582,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fsm/state.cpp",
+			"settings":
+			{
+				"buffer_size": 412,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fsm/state.h",
+			"settings":
+			{
+				"buffer_size": 399,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fsm/fsm.h",
+			"settings":
+			{
+				"buffer_size": 105,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 157,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 815,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fsm/finite_state_system.h",
+			"settings":
+			{
+				"buffer_size": 3492,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/State.cs",
+			"settings":
+			{
+				"buffer_size": 1084,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/TimerState.cs",
+			"settings":
+			{
+				"buffer_size": 760,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "project1 (Windows)",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"project1 (Windows)",
+					""
+				],
+				[
+					"project1 (Windows)",
+					"rebuild_cache"
+				],
+				[
+					"project1 (Windows)",
+					"src/rebuild_cache"
+				],
+				[
+					"project1 (Windows)",
+					"project1.exe"
+				],
+				[
+					"project1 (Windows)",
+					"src/all"
+				],
+				[
+					"project1 (Windows)",
+					"all"
+				],
+				[
+					"project1 (Windows)",
+					"clean"
+				]
+			],
+			[
+				"project1 (Windows)",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"CmakeClear",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"Cmake",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"new file",
+				"File: New File Relative to Current View"
+			],
+			[
+				"CMake",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"C++",
+				"Set Syntax: C++"
+			],
+			[
+				"nre",
+				"File: New File Relative to Current View"
+			],
+			[
+				"Write",
+				"CMakeBuilder: Write Build Targets to Sublime Project File"
+			],
+			[
+				"CmakeConfi",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"clear",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"Clear",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"Config",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"Conf",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"proj",
+				"Project: Close"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"Con",
+				"Set Syntax: Configure"
+			],
+			[
+				"Confi",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"Claer",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"Configu",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"CmakeClea",
+				"CMakeBuilder: Clear Cache"
+			],
+			[
+				"Confg",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"CmakeBuilderConfig",
+				"CMakeBuilder: Configure"
+			],
+			[
+				"CmakeBuilder",
+				"CMakeBuilder: Browse Build Folder…"
+			],
+			[
+				"Write Build",
+				"CMakeBuilder: Write Build Targets to Sublime Project File"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Disco",
+				"Discord Rich Presence: Disconnect"
+			],
+			[
+				"Discord",
+				"Discord Rich Presence: Connect to Discord"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Omni",
+				"OmniSharpSublime: Build"
+			],
+			[
+				"C#",
+				"Set Syntax: C#"
+			],
+			[
+				"text",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"newnew",
+				"File: New File Relative to Current View"
+			],
+			[
+				"tex",
+				"Text Pastry: From 0 To X"
+			],
+			[
+				"rust",
+				"Set Syntax: Rust"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"text pastry from",
+				"Text Pastry: From 0 To X"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"deleete",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"new fil",
+				"File: New File Relative to Current View"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 553.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/lib",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/fsm"
+	],
+	"file_history":
+	[
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/FiniteStateMachine.cs",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/finite_state_machine/finite_state_system.h",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/finite_state_machine",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/test_fsm.h",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/CMakeLists.txt",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/CMakeLists.txt",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/main.cpp",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/state.cpp",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/IState.cs",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/project1.sublime-project",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/src/drawable.h",
+		"/C/Users/Clark/AppData/Local/Temp/firstProgram.cpp",
+		"/C/Users/Clark/AppData/Local/Temp/interactiveTriangle.cpp",
+		"/C/Users/Clark/Documents/Programming/School/CS545/project1/configproj.sublime-project",
+		"/C/Users/Clark/Documents/Programming/School/CS545/configproj/configproj.sublime-project",
+		"/C/Users/Clark/Documents/Programming/School/CS545/configproj/src/main.cpp",
+		"/C/Users/Clark/Documents/Programming/School/CS307/configproj/src/testclass.h",
+		"/C/Users/Clark/Documents/Programming/School/CS307/configproj/src/main.cpp",
+		"/C/Users/Clark/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/Clark/Documents/Programming/School/CS307/configproj/CMakeLists.txt",
+		"/C/Users/Clark/Documents/Programming/School/CS307/configproj/configproj.sublime-project",
+		"/C/Users/Clark/Documents/Programming/School/CS307/configproj/src/CMakeLists.txt",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Controller2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController.cs",
+		"/C/Users/Clark/AppData/Roaming/Sublime Text 3/Packages/OmniSharp/PrebuiltOmniSharpServer/config.json",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/EditorHelper.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/mini_clungeons.sublime-project",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/ProcGenTest.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/CombatLibrary/CombatStats.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerMovement.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Windows/CompileTimeWindow.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Editors/AttackLibrary_Editor.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerHealth.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController_AirStates.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController_MoveStates.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController_StateStructs.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerDeath.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/InputForgiver.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Scrub/ScrubController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Standard Assets/2D/Scripts/Camera2DFollow.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController_DashStates.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/PlayerController_AttackStates.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/GameController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Windows/LevelInfoWindow.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/CameraShake2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/State.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/ScreenShake.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/GUI/HealthBarController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/GameConstants.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Node.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/FacingDirection.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Dungeon.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Rewired/Extras/ControlMapper/Scripts/Editor/ControlMapperInspector.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/DungeonGenerator.cs",
+		"/C/Users/Clark/AppData/LocalLow/DefaultCompany/mini_clungeons/ProcLogs.txt",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/ChunkGrid.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/ProcLogger.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/ChunkMetadata.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/dungeon_generator.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Edge.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Exit.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Room.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/SimpleGrid.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/SimpleGraph.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/ProcGenConstants.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Windows/ChunkLoaderWindow.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Core/SerDictionary.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Util.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/pseudocode.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Editors/ChunkMetadata_Editor.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Menu/ApplySelectedPrefabs.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Attack Library/AttackLibrary.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Editor/Menu",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Tilemap/GridInformation/Scripts/GridInformation.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/Tuple.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/graph_objects.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Build/test_Data/Resources/unity default resources",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/chunk_objects.py",
+		"/C/Users/Clark/AppData/Local/Unity/Editor/Editor.log",
+		"/C/Users/Clark/AppData/LocalLow/DefaultCompany/mini_clungeons/output_log.txt",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Core/GameConstants.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Util/DrawGizmoSphereOn.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/node_grid_output.txt",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/constants.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/pseudocode/ProcGen/utilities.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Weapon/WCLibrary.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/GraphObjects.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Core/Utilities.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ProcGen/Grid.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/StateMachines/State.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/RadialSensor2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/BasicSensor2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Core/RaycastController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Core/Controller2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/StateMachines/FiniteStateMachine.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enchantments/Enchantments.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/PointSensor2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/HealthComponent.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Attack Library/AttackReceiver.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/ScrubMovement.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/BoxSensor2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ReceivesKnockback.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/AIController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/EnemyDeath.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Player/EnemyMovement.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/ISensor2D.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/GUI/HealthBarController.cs",
+		"/C/Users/Clark/projects/hello_world/main.rs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/ProcGen/pseudocode.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/ProcGen/constants.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/ProcGen/dungeon_generator.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/ProcGen/coolstuff.py",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/ScrubMovement.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/StateMachines/TimerState.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/StateMachines/StateStructs.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Attack Library/AttackController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/ProcGen/Dungeon.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enchantments/EnchEffect.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enchantments/Implementations/EnchAoeOnJump.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/FacingRight.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/GUI/BasicImageScalar.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/BasicSensor.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/RadialSensor.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enchantments/Implementations/EnchBuffOnRoll.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemies/Sensors/ISensor.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemy Controllers/ScrubController.cs",
+		"/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/Game/Enemy Controllers/AI.cs"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"state",
+			"Enum",
+			"EnableBitMaskOperators",
+			"conditions",
+			"ENABLE_BITMASK_OPERATORS",
+			"mytype",
+			"EnableBitMaskOperators",
+			"EnableFlags",
+			"EnableFlagsnableflags",
+			"EnableFlags",
+			"char",
+			"Flags",
+			"T",
+			"S",
+			"source",
+			"Source",
+			"source",
+			"u32",
+			"move",
+			"s",
+			"std",
+			"_enter",
+			"_entry_state",
+			"entry_state",
+			"_previous_state",
+			"u32",
+			"cool",
+			"COOL3",
+			"COOL",
+			"cool",
+			"funtype_move",
+			"exit",
+			"update",
+			"State",
+			"return",
+			"test",
+			"MyTest",
+			"state",
+			"cout",
+			"_enter",
+			"600",
+			"800",
+			"10f",
+			"600",
+			"800",
+			"hello",
+			" ${"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/fsm/enum_class_bitmasks.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								582,
+								582
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/fsm/state.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/fsm/state.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/fsm/fsm.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/fsm/state.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								376,
+								376
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/fsm/finite_state_system.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3124,
+								3124
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1664.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/State.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/Clark/Documents/Programming/Projects/main_game/Assets/Scripts/LWG/StateMachines/TimerState.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 247.0
+	},
+	"output.files_to_be_deleted":
+	{
+		"height": 109.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "project1 (Windows)",
+	"project": "project1.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"finite",
+				"src\\fsm\\finite_state_system.h"
+			],
+			[
+				"main",
+				"src\\main.cpp"
+			],
+			[
+				"sat",
+				"src\\fsm\\state.h"
+			],
+			[
+				"fsm",
+				"src\\fsm\\fsm.h"
+			],
+			[
+				"enum",
+				"src\\fsm\\enum_class_bitmasks.h"
+			],
+			[
+				"Cmake",
+				"src\\CMakeLists.txt"
+			],
+			[
+				"state",
+				"src\\finite_state_machine\\state.cpp"
+			],
+			[
+				"Finite",
+				"C:\\Users\\Clark\\Documents\\Programming\\Projects\\main_game\\Assets\\Scripts\\LWG\\StateMachines\\FiniteStateMachine.cs"
+			],
+			[
+				"CMake",
+				"CMakeLists.txt"
+			],
+			[
+				"test",
+				"src\\test_fsm.h"
+			],
+			[
+				"mian",
+				"src\\main.cpp"
+			],
+			[
+				"FiniteS",
+				"C:\\Users\\Clark\\Documents\\Programming\\Projects\\main_game\\Assets\\Scripts\\LWG\\StateMachines\\FiniteStateMachine.cs"
+			],
+			[
+				"project",
+				"project1.sublime-project"
+			],
+			[
+				"state.cpp",
+				"src\\state.cpp"
+			],
+			[
+				"draw",
+				"src\\drawable.h"
+			],
+			[
+				"p",
+				"configproj.sublime-project"
+			],
+			[
+				"proj",
+				"configproj.sublime-project"
+			],
+			[
+				"config",
+				"configproj.sublime-project"
+			],
+			[
+				"Proj",
+				"configproj.sublime-project"
+			],
+			[
+				"AttackLib",
+				"Assets\\Editor\\Windows\\AttackLibraryWindow.cs"
+			],
+			[
+				"Input",
+				"Assets\\Scripts\\Game\\Player\\InputForgiver.cs"
+			],
+			[
+				"Player",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"Controller",
+				"Assets\\Scripts\\Game\\Controller2D.cs"
+			],
+			[
+				"PlayerCon",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"ProcGen",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"",
+				"Assets\\Editor\\EditorHelper.cs"
+			],
+			[
+				"Pro",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"Combat",
+				"Assets\\Scripts\\Game\\CombatLibrary\\CombatStats.cs"
+			],
+			[
+				"sublime",
+				"mini_clungeons.sublime-project"
+			],
+			[
+				"Com",
+				"Assets\\Editor\\Windows\\CompileTimeWindow.cs"
+			],
+			[
+				"PLayeo",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"Attack",
+				"Assets\\Editor\\Editors\\AttackLibrary_Editor.cs"
+			],
+			[
+				"PlayerMove",
+				"Assets\\Scripts\\Game\\Player\\PlayerMovement.cs"
+			],
+			[
+				"PlayerHeal",
+				"Assets\\Scripts\\Game\\Player\\PlayerHealth.cs"
+			],
+			[
+				"StateStru",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_StateStructs.cs"
+			],
+			[
+				"MoveState",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_MoveStates.cs"
+			],
+			[
+				"AirState",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AirStates.cs"
+			],
+			[
+				"PlayerDea",
+				"Assets\\Scripts\\Game\\Player\\PlayerDeath.cs"
+			],
+			[
+				"Playero",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"AirStates",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AirStates.cs"
+			],
+			[
+				"AirS\t",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AirStates.cs"
+			],
+			[
+				"PlayerAirS",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AirStates.cs"
+			],
+			[
+				"Pla",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"projec",
+				"mini_clungeons.sublime-project"
+			],
+			[
+				"Contro",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AirStates.cs"
+			],
+			[
+				"Scrub",
+				"Assets\\Scripts\\Game\\Enemies\\Scrub\\ScrubController.cs"
+			],
+			[
+				"PLayerCon",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"PlayerC",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"PLayer",
+				"Assets\\Scripts\\Game\\Player\\PlayerController.cs"
+			],
+			[
+				"AttackStates",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AttackStates.cs"
+			],
+			[
+				"DashState",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_DashStates.cs"
+			],
+			[
+				"InputFo",
+				"Assets\\Scripts\\Game\\Player\\InputForgiver.cs"
+			],
+			[
+				"State",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_StateStructs.cs"
+			],
+			[
+				"MoveStae",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_MoveStates.cs"
+			],
+			[
+				"AttackState",
+				"Assets\\Scripts\\Game\\Player\\PlayerController_AttackStates.cs"
+			],
+			[
+				"Camera",
+				"Assets\\Scripts\\LWG\\CameraShake2D.cs"
+			],
+			[
+				"CameraSha",
+				"Assets\\Scripts\\LWG\\CameraShake2D.cs"
+			],
+			[
+				"GameCon",
+				"Assets\\Scripts\\Game\\GameController.cs"
+			],
+			[
+				"ScreenSha",
+				"Assets\\Scripts\\LWG\\ScreenShake.cs"
+			],
+			[
+				"HealthBar",
+				"Assets\\Scripts\\Game\\GUI\\HealthBarController.cs"
+			],
+			[
+				"Screen",
+				"Assets\\Scripts\\LWG\\ScreenShake.cs"
+			],
+			[
+				"Shake",
+				"Assets\\Scripts\\LWG\\ScreenShake.cs"
+			],
+			[
+				"GameConst",
+				"Assets\\Scripts\\Game\\GameConstants.cs"
+			],
+			[
+				"DungeonGe",
+				"Assets\\Scripts\\Game\\ProcGen\\DungeonGenerator.cs"
+			],
+			[
+				"Dungeon",
+				"Assets\\Scripts\\Game\\ProcGen\\Dungeon.cs"
+			],
+			[
+				"Node",
+				"Assets\\Scripts\\Game\\ProcGen\\Node.cs"
+			],
+			[
+				"ProcGenCon",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenConstants.cs"
+			],
+			[
+				"ProcLogger",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcLogger.cs"
+			],
+			[
+				"Exit",
+				"Assets\\Scripts\\Game\\ProcGen\\Exit.cs"
+			],
+			[
+				"Room",
+				"Assets\\Scripts\\Game\\ProcGen\\Room.cs"
+			],
+			[
+				"CHunk",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"ChunkGrid",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"DUngeon",
+				"pseudocode\\ProcGen\\dungeon_generator.py"
+			],
+			[
+				"Simple",
+				"Assets\\Scripts\\Game\\ProcGen\\SimpleGrid.cs"
+			],
+			[
+				"Edge",
+				"Assets\\Scripts\\Game\\ProcGen\\Edge.cs"
+			],
+			[
+				"ChunkGri",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"Chunk",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"SimpleGrid",
+				"Assets\\Scripts\\Game\\ProcGen\\SimpleGrid.cs"
+			],
+			[
+				"SImple",
+				"Assets\\Scripts\\Game\\ProcGen\\SimpleGrid.cs"
+			],
+			[
+				"chunkMeta",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkMetadata.cs"
+			],
+			[
+				"ProcGenTest",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"ChunkMeta",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkMetadata.cs"
+			],
+			[
+				"CHunkMeta",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkMetadata.cs"
+			],
+			[
+				"ChunkLoade\t",
+				"Assets\\Editor\\Windows\\ChunkLoaderWindow.cs"
+			],
+			[
+				"ApplySelec",
+				"Assets\\Editor\\Menu\\ApplySelectedPrefabs.cs"
+			],
+			[
+				"editor",
+				"Assets\\Editor\\Editors\\ChunkMetadata_Editor.cs"
+			],
+			[
+				"Editor",
+				"Assets\\Editor\\Editors\\AttackLibrary_Editor.cs"
+			],
+			[
+				"ChunkLoader",
+				"Assets\\Editor\\Windows\\ChunkLoaderWindow.cs"
+			],
+			[
+				"SerDi",
+				"Assets\\Scripts\\Core\\SerDictionary.cs"
+			],
+			[
+				"SerDic",
+				"Assets\\Scripts\\Core\\SerDictionary.cs"
+			],
+			[
+				"ChunkMet",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkMetadata.cs"
+			],
+			[
+				"SerD",
+				"Assets\\Scripts\\Core\\SerDictionary.cs"
+			],
+			[
+				"Window",
+				"Assets\\Editor\\Windows\\LevelInfoWindow.cs"
+			],
+			[
+				"PGC",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenConstants.cs"
+			],
+			[
+				"ChunkMetadata",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkMetadata.cs"
+			],
+			[
+				"ProcLo",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcLogger.cs"
+			],
+			[
+				"Procgen",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"ChunkG",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"CHunkGri",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"Dugn",
+				"Assets\\Scripts\\Game\\ProcGen\\Dungeon.cs"
+			],
+			[
+				"ProGen",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenConstants.cs"
+			],
+			[
+				"Duneon",
+				"Assets\\Scripts\\Game\\ProcGen\\Dungeon.cs"
+			],
+			[
+				"Rungeon",
+				"pseudocode\\ProcGen\\dungeon_generator.py"
+			],
+			[
+				"dungeon",
+				"pseudocode\\ProcGen\\dungeon_generator.py"
+			],
+			[
+				"Tuple",
+				"Assets\\Scripts\\LWG\\Tuple.cs"
+			],
+			[
+				"Grid",
+				"Assets\\Tilemap\\GridInformation\\Scripts\\GridInformation.cs"
+			],
+			[
+				"procLogger",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcLogger.cs"
+			],
+			[
+				"Dun",
+				"Assets\\Scripts\\Game\\ProcGen\\Dungeon.cs"
+			],
+			[
+				"round",
+				"Build\\test_Data\\Resources\\unity default resources"
+			],
+			[
+				"rounf",
+				"Build\\test_Data\\Resources\\unity default resources"
+			],
+			[
+				"graph",
+				"pseudocode\\ProcGen\\graph_objects.py"
+			],
+			[
+				"ProcLog",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcLogger.cs"
+			],
+			[
+				"Util",
+				"Assets\\Scripts\\Game\\ProcGen\\Util.cs"
+			],
+			[
+				"ProcTest",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"ProcLogg",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcLogger.cs"
+			],
+			[
+				"Proc",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"ProcGe",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenConstants.cs"
+			],
+			[
+				"CHunkG",
+				"Assets\\Scripts\\Game\\ProcGen\\ChunkGrid.cs"
+			],
+			[
+				"SimpleG",
+				"Assets\\Scripts\\Game\\ProcGen\\SimpleGrid.cs"
+			],
+			[
+				"chunk",
+				"pseudocode\\ProcGen\\chunk_objects.py"
+			],
+			[
+				"P",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"Gaem\t",
+				"Assets\\Scripts\\Core\\GameConstants.cs"
+			],
+			[
+				"ProcGenConst",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenConstants.cs"
+			],
+			[
+				"dunon",
+				"pseudocode\\ProcGen\\dungeon_generator.py"
+			],
+			[
+				"ProcGentest",
+				"Assets\\Scripts\\Game\\ProcGen\\ProcGenTest.cs"
+			],
+			[
+				"Draw",
+				"Assets\\Scripts\\Util\\DrawGizmoSphereOn.cs"
+			],
+			[
+				"chn",
+				"pseudocode\\ProcGen\\chunk_objects.py"
+			],
+			[
+				"dun",
+				"pseudocode\\ProcGen\\dungeon_generator.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 104.0,
+		"last_filter": "rename",
+		"selected_items":
+		[
+			[
+				"rename",
+				"PlayerEnchantments"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 282.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
