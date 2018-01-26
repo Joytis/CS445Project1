@@ -2,16 +2,16 @@
 
 using namespace fsm;
 
-void state::enter() {
-	_enter();
+void state::enter(float x, float y) {
+	_enter(x, y);
 }
 
-void state::update() {
-	_update();
+void state::update(float x, float y) {
+	_update(x, y);
 }
 
-void state::exit() {
-	_exit();
+void state::exit(float x, float y) {
+	_exit(x, y);
 }
 
 state::state(funtype_move enter, funtype_move update, funtype_move exit)
@@ -20,6 +20,9 @@ state::state(funtype_move enter, funtype_move update, funtype_move exit)
 }
 
 // Make a state that does nothing. 
+// Stuff a bunch of lambdas in it. 
 state::state()
-	: _enter([](){}), _update([](){}), _exit([](){})
+	: _enter(std::move([](float x, float y){})), 
+	  _update(std::move([](float x, float y){})), 
+	  _exit(std::move([](float x, float y){}))
 {}

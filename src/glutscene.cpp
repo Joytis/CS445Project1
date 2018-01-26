@@ -3,9 +3,12 @@
 using namespace std::placeholders;
 
 glutscene::glutscene(std::pair<float, float> c, std::pair<int, int> r) :
-	_canvas_size(c), _raster_size(r)
+	_canvas_size(c), _raster_size(r), 
+	_mouse_drawer(std::make_tuple(1.0f, 0.0f, 1.0f), 5.0f) // purple
 {
-
+    triangle_drawer tri;
+    _triangles.push_back(std::move(tri));
+    _current_drawer = &(_triangles.back()); // look at the back element of this vector. 
 }
 
 void glutscene::reshape(int w, int h) {
@@ -27,14 +30,13 @@ void glutscene::display() {
     // glColor3f(color);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    
-    // Draw cursor
-	glColor3f(1.0f, 0.0f, 1.0f);
-    glPointSize(10.0f);
-    glBegin(GL_POINTS);
-    glVertex2f(_mouse_pos.first, _mouse_pos.second);
-    glEnd();
-    glPointSize(1.0f);
+
+    _mouse_drawer.draw(_mouse_pos.first, _mouse_pos.second);
+
+    // Draw all the stored primatives. 
+    for(auto& tri : _triangles) {
+        tri.draw(_mouse_pos.first, _mouse_pos.second);
+    }
 
     glutSwapBuffers();
 }
@@ -53,8 +55,27 @@ void glutscene::mouse(int button, int state, int x, int y) {
         _mouse_pos.first = (float)x / _raster_size.first * _canvas_size.first;
         _mouse_pos.second = (float)(_raster_size.second - y) / _raster_size.second * _canvas_size.second;
         
-        glutPostRedisplay();
+        trigger_data dat;
+        dat.type = triggers::lmouse_down;
+        dat.lmouse_down_data.x = _mouse_pos.first;
+        dat.lmouse_down_data.y = _mouse_pos.second;
+        dat.lmouse_down_data.color = std::make_tuple(1.0f, 0.0f, 1.0f);
+        _mouse_drawer.send_trigger(dat);
+        _current_drawer->send_trigger(dat);
+
+        // glutPostRedisplay();
     }
+
+    if(button == GLUT_LEFT_BUTTON && state == GLUT_UP) {
+        trigger_data dat;
+        dat.type = triggers::lmouse_up;
+        dat.lmouse_up_data.x = _mouse_pos.first;
+        dat.lmouse_up_data.y = _mouse_pos.second;
+        dat.lmouse_up_data.color = std::make_tuple(1.0f, 0.0f, 1.0f);
+        _mouse_drawer.send_trigger(dat);
+        _current_drawer->send_trigger(dat);
+    }
+
 }
 
 void glutscene::motion(int x, int y) {
@@ -69,5 +90,9 @@ void glutscene::motion(int x, int y) {
 }
 
 void glutscene::menu(int value) {
-	
+
+}
+
+void glutscene::idle() {
+	glutPostRedisplay();
 }

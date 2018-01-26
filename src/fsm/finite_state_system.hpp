@@ -2,6 +2,7 @@
 
 #include <unordered_map>
 #include <vector>
+#include <iostream>
 #include "state.hpp"
 
 namespace fsm {
@@ -84,18 +85,19 @@ public:
 	}
 
 
-	void update() {
+	// Have mouse coords here. 
+	void update(float x, float y) {
 		// Check for state transition
-		while(process_triggers()) {}
+		while(process_triggers(x, y)) {}
 		// reset all triggers
 		triggers = 0;
 		// Update next state. 
-		states[_current_state].update();
+		states[_current_state].update(x, y);
 	}
 
-	void reset() {
+	void reset(float x, float y) {
 		if(_current_state != _entry_state) {
-			transition_away(_entry_state);
+			transition_away(_entry_state, x, y);
 		}
 	}
 
@@ -107,19 +109,19 @@ public:
 
 private:
 
-	void transition_away(T target) {
+	void transition_away(T target, float x, float y) {
 		// Exit current state
 		_target_state = target;
-		states[_current_state].exit();
+		states[_current_state].exit(x, y);
 
 		// Swap state
 		_previous_state = _current_state;
 		_current_state = target;
 
-		states[_current_state].enter();
+		states[_current_state].enter(x, y);
 	}
 
-	bool process_triggers() {
+	bool process_triggers(float x, float y) {
 		// Check all the transitions for valid states to move to. 
 		for(auto& t : transitions[_current_state]) {
 			// Check if the triggers have been fired bit bitwise ANDING
@@ -128,7 +130,7 @@ private:
 			u32 condition = static_cast<u32>(t.condition);
 			if((triggers & condition) == condition) {
 				// Go away
-				transition_away(t.target);
+				transition_away(t.target, x, y);
 				// Eat the conditions
 				triggers &= (~condition);
 				// We're good. Get outta here. 
