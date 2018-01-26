@@ -4,11 +4,15 @@ using namespace std::placeholders;
 
 glutscene::glutscene(std::pair<float, float> c, std::pair<int, int> r) :
 	_canvas_size(c), _raster_size(r), 
-	_mouse_drawer(std::make_tuple(1.0f, 0.0f, 1.0f), 5.0f) // purple
+    _current_color(red),
+    _current_state(draw_state::triangle),
+    _current_width(5.0),
+    _mouse_drawer(_current_color, _current_width)
 {
     triangle_drawer tri;
     _triangles.push_back(std::move(tri));
     _current_drawer = &(_triangles.back()); // look at the back element of this vector. 
+    update_cursor();
 }
 
 void glutscene::reshape(int w, int h) {
@@ -34,8 +38,16 @@ void glutscene::display() {
     _mouse_drawer.draw(_mouse_pos.first, _mouse_pos.second);
 
     // Draw all the stored primatives. 
-    for(auto& tri : _triangles) {
+    for(auto& tri : _triangles) 
         tri.draw(_mouse_pos.first, _mouse_pos.second);
+    for(auto& quad : _quads) 
+        quad.draw(_mouse_pos.first, _mouse_pos.second);
+    for(auto& line : _lines) 
+        line.draw(_mouse_pos.first, _mouse_pos.second);
+
+        
+    if(_current_drawer->is_complete()) {
+        create_new_primative();
     }
 
     glutSwapBuffers();
@@ -43,9 +55,15 @@ void glutscene::display() {
 
 void glutscene::keyboard(unsigned char key, int x, int y) {
 	switch(key){
-        case 27:
+        case 27: { // escape
             exit(0);
-            break;
+        } break;
+        case 32: { // space
+            trigger_data dat;
+            dat.type = triggers::finalize_build;
+            _mouse_drawer.send_trigger(dat);
+            _current_drawer->send_trigger(dat);
+        } break;
     }
 }
 
@@ -59,7 +77,7 @@ void glutscene::mouse(int button, int state, int x, int y) {
         dat.type = triggers::lmouse_down;
         dat.lmouse_down_data.x = _mouse_pos.first;
         dat.lmouse_down_data.y = _mouse_pos.second;
-        dat.lmouse_down_data.color = std::make_tuple(1.0f, 0.0f, 1.0f);
+        dat.lmouse_down_data.color = _current_color;
         _mouse_drawer.send_trigger(dat);
         _current_drawer->send_trigger(dat);
 
@@ -71,7 +89,7 @@ void glutscene::mouse(int button, int state, int x, int y) {
         dat.type = triggers::lmouse_up;
         dat.lmouse_up_data.x = _mouse_pos.first;
         dat.lmouse_up_data.y = _mouse_pos.second;
-        dat.lmouse_up_data.color = std::make_tuple(1.0f, 0.0f, 1.0f);
+        dat.lmouse_up_data.color = _current_color;
         _mouse_drawer.send_trigger(dat);
         _current_drawer->send_trigger(dat);
     }
@@ -89,8 +107,149 @@ void glutscene::motion(int x, int y) {
     glutPostRedisplay();
 }
 
-void glutscene::menu(int value) {
+// Forward the callback to openGL
+void glutscene::createMenu(void (*menu)(int)) {
 
+    int colorMenu = glutCreateMenu(menu);
+    glutAddMenuEntry("Red", 00);
+    glutAddMenuEntry("Orange", 01);
+    glutAddMenuEntry("Yellow", 02);
+    glutAddMenuEntry("Green", 03);
+    glutAddMenuEntry("Blue", 04);
+    glutAddMenuEntry("Purple", 05);
+
+    int lineWidthMenu = glutCreateMenu(menu);
+    glutAddMenuEntry("Small", 30);
+    glutAddMenuEntry("Medium", 31);
+    glutAddMenuEntry("Largs", 32);
+
+    int shapeMenu = glutCreateMenu(menu);
+    glutAddMenuEntry("Triangle", 10);
+    glutAddMenuEntry("Lines", 11);
+    glutAddMenuEntry("Quad", 12);
+    glutAddMenuEntry("Circle", 13);
+    glutAddMenuEntry("Polygon", 14);
+
+    glutCreateMenu(menu);
+    glutAddSubMenu("Shapes", shapeMenu);
+    glutAddSubMenu("Colors", colorMenu);
+    glutAddSubMenu("PointSize", lineWidthMenu);
+    glutAddMenuEntry("Clear", 20);
+    glutAddMenuEntry("Exit", 21);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
+void glutscene::update_cursor() {
+    // just make a new one. 
+    _mouse_drawer = point_drawer(_current_color, _current_width);
+}
+
+void glutscene::menu(int value) {
+    switch(value) {
+        // Change current rendering color. 
+        case 00 : { _current_color = glutscene::red; } break;
+        case 01 : { _current_color = glutscene::orange; } break;
+        case 02 : { _current_color = glutscene::yellow; } break;
+        case 03 : { _current_color = glutscene::green; } break;
+        case 04 : { _current_color = glutscene::blue; } break;
+        case 05 : { _current_color = glutscene::purple; } break;
+
+        // Update drawing state
+        case 10 : { 
+            change_drawing_state(draw_state::triangle);
+            update_cursor();
+        } break;
+        case 11 : { 
+            change_drawing_state(draw_state::lines);
+            update_cursor();
+        } break;
+        case 12 : { 
+            change_drawing_state(draw_state::quad);
+            update_cursor();
+        } break;
+        case 13 : { 
+            change_drawing_state(draw_state::circle);
+            update_cursor();
+        } break;
+        case 14 : { 
+            change_drawing_state(draw_state::polygon);
+            update_cursor();
+        } break;
+
+        // Clear screen
+        case 20 : {
+            _triangles.clear();
+            _quads.clear();
+            create_new_primative();
+        } break;
+
+        case 21 : { exit(0); } break;
+
+        // Line cursor ssizes. 
+        case 30 : {
+            _current_width = 5.0f;
+            update_cursor();
+        } break;
+        case 31 : {
+            _current_width = 10.0f;
+            update_cursor();
+        } break;
+        case 32 : {
+            _current_width = 15.0f;
+            update_cursor();
+        } break;
+    }
+}
+
+void glutscene::create_new_primative() {
+    // Make a new shape to draw. 
+    switch(_current_state) {
+        // triangles 
+        case draw_state::triangle: {
+            triangle_drawer tri;
+            _triangles.push_back(std::move(tri));
+            _current_drawer = &(_triangles.back());
+        } break;
+
+        // lines
+        case draw_state::lines: {
+            line_drawer line(_current_width);
+            _lines.push_back(std::move(line));
+            _current_drawer = &(_lines.back());
+        } break;
+
+        // Quads
+        case draw_state::quad: {
+            quad_drawer quad;
+            _quads.push_back(std::move(quad));
+            _current_drawer = &(_quads.back());
+        } break;
+
+        // Circles
+        case draw_state::circle: {
+
+        } break;
+
+        // polygons
+        case draw_state::polygon: {
+
+        } break;
+    }
+}
+
+void glutscene::change_drawing_state(draw_state newstate) {
+    if(!_current_drawer->is_complete()) {
+        switch(_current_state) {
+            case draw_state::triangle: { _triangles.pop_back(); } break;
+            case draw_state::lines: { } break;
+            case draw_state::quad: { _quads.pop_back(); } break;
+            case draw_state::circle: {} break;
+            case draw_state::polygon: {} break;
+        }
+    }
+
+    _current_state = newstate;
+    create_new_primative();
 }
 
 void glutscene::idle() {

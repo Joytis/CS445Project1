@@ -46,6 +46,8 @@ int main(int argc, char *argv[]) {
     glutPassiveMotionFunc(motion);
     glutIdleFunc(idle);
 
+    scene->createMenu(menu);
+
     glutMainLoop();
 
     return 0;

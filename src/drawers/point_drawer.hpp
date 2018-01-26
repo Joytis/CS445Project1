@@ -7,10 +7,9 @@
 #include "../fsm/fsm.hpp"
 
 enum class point_drawer_states {
-	draw_point = (1 << 0),
-	no_point = (1 << 1),
+	draw_point,
+	no_point
 };
-ENABLE_BITMASK_OPERATORS(point_drawer_states)
 
 class point_drawer : public gl_drawer {
 private:

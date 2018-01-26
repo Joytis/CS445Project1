@@ -6,14 +6,15 @@
 #include "gl_drawer.hpp"
 #include "../fsm/fsm.hpp"
 
-enum class triangle_drawer_states {
+enum class quad_drawer_states {
 	no_points,
 	first_point,
 	second_point,
+	third_point,
 	final
 };
 
-class triangle_drawer : public gl_drawer {
+class quad_drawer : public gl_drawer {
 private: 
 	
 	struct point {
@@ -22,13 +23,13 @@ private:
 		std::tuple<float, float, float> color;
 	};
 
-	fsm::finite_state_system<triangle_drawer_states, triggers> _fsm;
+	fsm::finite_state_system<quad_drawer_states, triggers> _fsm;
 	// points
 	std::vector<point> _points;
 
 
 public:
-	triangle_drawer();
+	quad_drawer();
 
 	void draw(float x, float y);
 	void send_trigger(trigger_data trig);
