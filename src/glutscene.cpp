@@ -68,6 +68,37 @@ void glutscene::keyboard(unsigned char key, int x, int y) {
             _mouse_drawer.send_trigger(dat);
             _current_drawer->send_trigger(dat);
         } break;
+
+        // Keycode 1
+        case 49 : { 
+            _current_color = glutscene::red; 
+            update_cursor();
+        } break;
+        // Keycode 2
+        case 50 : { 
+            _current_color = glutscene::orange; 
+            update_cursor();
+        } break;
+        // Keycode 3
+        case 51 : { 
+            _current_color = glutscene::yellow; 
+            update_cursor();
+        } break;
+        // Keycode 4
+        case 52 : { 
+            _current_color = glutscene::green; 
+            update_cursor();
+        } break;
+        // Keycode 5
+        case 53 : { 
+            _current_color = glutscene::blue; 
+            update_cursor();
+        } break;
+        // Keycode 6
+        case 54 : { 
+            _current_color = glutscene::purple; 
+            update_cursor();
+        } break;
     }
 }
 
