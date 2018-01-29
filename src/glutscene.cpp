@@ -7,6 +7,8 @@ glutscene::glutscene(std::pair<float, float> c, std::pair<int, int> r) :
     _current_color(red),
     _current_state(draw_state::triangle),
     _current_width(5.0),
+    _line_width(5.0),
+
     _mouse_drawer(_current_color, _current_width)
 {
     triangle_drawer tri;
@@ -152,10 +154,15 @@ void glutscene::createMenu(void (*menu)(int)) {
     glutAddMenuEntry("Blue", 04);
     glutAddMenuEntry("Purple", 05);
 
-    int lineWidthMenu = glutCreateMenu(menu);
+    int pointWidthMenu = glutCreateMenu(menu);
     glutAddMenuEntry("Small", 30);
     glutAddMenuEntry("Medium", 31);
     glutAddMenuEntry("Largs", 32);
+
+    int lineWidthMenu = glutCreateMenu(menu);
+    glutAddMenuEntry("Small", 40);
+    glutAddMenuEntry("Medium", 41);
+    glutAddMenuEntry("Largs", 42);
 
     int shapeMenu = glutCreateMenu(menu);
     glutAddMenuEntry("Point", 15);
@@ -168,7 +175,8 @@ void glutscene::createMenu(void (*menu)(int)) {
     glutCreateMenu(menu);
     glutAddSubMenu("Shapes", shapeMenu);
     glutAddSubMenu("Colors", colorMenu);
-    glutAddSubMenu("PointSize", lineWidthMenu);
+    glutAddSubMenu("PointSize", pointWidthMenu);
+    glutAddSubMenu("LineWidth", lineWidthMenu);
     glutAddMenuEntry("Clear", 20);
     glutAddMenuEntry("Exit", 21);
     glutAttachMenu(GLUT_RIGHT_BUTTON);
@@ -245,17 +253,32 @@ void glutscene::menu(int value) {
         // Line cursor ssizes. 
         case 30 : {
             _current_width = 5.0f;
+            cull_point_if_needed();
             update_cursor();
         } break;
         case 31 : {
             _current_width = 10.0f;
+            cull_point_if_needed();
             update_cursor();
         } break;
         case 32 : {
             _current_width = 15.0f;
+            cull_point_if_needed();
             update_cursor();
         } break;
+
+        // Line cursor ssizes. 
+        case 40 : {_line_width = 1.0f; } break;
+        case 41 : {_line_width = 3.0f; } break;
+        case 42 : {_line_width = 5.0f; } break;
     }
+}
+
+void glutscene::cull_point_if_needed() {
+    if(_current_state == draw_state::point && !(_current_drawer->is_complete()) ) {
+        _points.pop_back();
+        create_new_primative();
+    } 
 }
 
 void glutscene::create_new_primative() {
@@ -277,7 +300,7 @@ void glutscene::create_new_primative() {
 
         // lines
         case draw_state::lines: {
-            line_drawer line(_current_width);
+            line_drawer line(_line_width);
             _lines.push_back(std::move(line));
             _current_drawer = &(_lines.back());
         } break;

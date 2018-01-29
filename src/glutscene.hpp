@@ -38,7 +38,6 @@ private:
 	std::vector<line_drawer> _lines;
 	std::vector<polygon_drawer> _polygons;
 
-
 	gl_drawer* _current_drawer;
 
 	enum class draw_state {
@@ -51,9 +50,12 @@ private:
 	draw_state _current_state;
 
 	float _current_width = 3.0f;
+	float _line_width = 1.0f;
 
 public:
 	glutscene(std::pair<float, float> c, std::pair<int, int> r);
+
+	void cull_point_if_needed();
 
 	void change_drawing_state(draw_state newstate);
 	void createMenu(void (*menu)(int));

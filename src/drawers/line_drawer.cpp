@@ -6,6 +6,8 @@
 #include <GL/freeglut.h>
 #endif
 
+#include <iostream>
+
 using states = line_drawer_states;
 using std::get;
 
@@ -31,23 +33,41 @@ void line_drawer::draw(float x, float y) {
 
 		// Has points. 
 		case states::has_points: {
-    		glPointSize(_line_width);
-			glBegin(GL_LINE_STRIP);
-			for(auto& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
-				glVertex2f(p.x, p.y);
+    		glLineWidth(_line_width);
+			glBegin(GL_LINES);
+
+			auto p1 = _points.begin();
+			auto p2 = std::next(p1);
+			while(p2 != _points.end()) {
+				// point& p = _points[i];
+				glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+				glVertex2f(p1->x, p1->y);
+				glColor3f(get<0>(p2->color), get<1>(p2->color), get<2>(p2->color));
+				glVertex2f(p2->x, p2->y);
+				p1 = p2;
+				p2 = std::next(p2);
 			}
+			glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+			glVertex2f(p1->x, p1->y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
 		// Draw without cursor
 		case states::final: {
-			glPointSize(_line_width);
-			glBegin(GL_LINE_STRIP);
-			for(auto& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
-				glVertex2f(p.x, p.y);
+			glLineWidth(_line_width);
+			glBegin(GL_LINES);
+
+			auto p1 = _points.begin();
+			auto p2 = std::next(p1);
+			while(p2 != _points.end()) {
+				// point& p = _points[i];
+				glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+				glVertex2f(p1->x, p1->y);
+				glColor3f(get<0>(p2->color), get<1>(p2->color), get<2>(p2->color));
+				glVertex2f(p2->x, p2->y);
+				p1 = p2;
+				p2 = std::next(p2);
 			}
 			glEnd();
 		} break;
