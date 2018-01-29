@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../fsm/fsm.hpp"
+#include "color.hpp"
 
 enum class triggers {
 	lmouse_down = (1 << 0),
@@ -17,13 +18,13 @@ struct trigger_data {
 		struct { // Mouse position info
 			float x;
 			float y;
-			std::tuple<float, float, float> color;
+			s_color color;
 		} lmouse_down_data; 
 
 		struct { // Mouse position info
 			float x;
 			float y;
-			std::tuple<float, float, float> color;
+			s_color color;
 		} lmouse_up_data; 
 
 		struct {
@@ -37,3 +38,4 @@ struct trigger_data {
 
 	trigger_data() {}
 };
+

@@ -18,7 +18,7 @@ private:
 	struct point {
 		float x;
 		float y;
-		std::tuple<float, float, float> color;
+		s_color color;
 	};
 
 	fsm::finite_state_system<line_drawer_states, triggers> _fsm;

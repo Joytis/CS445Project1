@@ -6,18 +6,15 @@
 #include <GL/freeglut.h>
 #endif
 
-using states = polygon_drawer_states;
-using std::get;
-
 polygon_drawer::polygon_drawer() 
-	: _fsm(states::no_points)
+	: _fsm(polygon_drawer_states::no_points)
 {
 
 	// Transitions for FSM
-	_fsm.add_transition(states::no_points, states::one_point, triggers::lmouse_up);
-	_fsm.add_transition(states::one_point, states::has_points, triggers::lmouse_up);
-	_fsm.add_transition(states::has_points, states::has_points, triggers::lmouse_up);
-	_fsm.add_transition(states::has_points, states::final, triggers::finalize_build);
+	_fsm.add_transition(polygon_drawer_states::no_points, polygon_drawer_states::one_point, triggers::lmouse_up);
+	_fsm.add_transition(polygon_drawer_states::one_point, polygon_drawer_states::has_points, triggers::lmouse_up);
+	_fsm.add_transition(polygon_drawer_states::has_points, polygon_drawer_states::has_points, triggers::lmouse_up);
+	_fsm.add_transition(polygon_drawer_states::has_points, polygon_drawer_states::final, triggers::finalize_build);
 
 }
 
@@ -25,23 +22,23 @@ void polygon_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case states::no_points: { } break;
+		case polygon_drawer_states::no_points: { } break;
 
 		// Draw the first point and line to cursor. 
-		case states::one_point: {
+		case polygon_drawer_states::one_point: {
 			point& p = _points[0];
 			glBegin(GL_LINE_STRIP);
-			glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+			glColor3f(p.color.r, p.color.g, p.color.b);
 			glVertex2f(p.x, p.y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
 		// Has points. 
-		case states::has_points: {
+		case polygon_drawer_states::has_points: {
 			glBegin(GL_POLYGON);
 			for(auto& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glVertex2f(x, y);
@@ -49,10 +46,10 @@ void polygon_drawer::draw(float x, float y) {
 		} break;
 
 		// Draw without cursor
-		case states::final: {
+		case polygon_drawer_states::final: {
 			glBegin(GL_POLYGON);
 			for(auto& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glEnd();
@@ -82,6 +79,6 @@ void polygon_drawer::clear() {
 }
 
 bool polygon_drawer::is_complete() {
-	return _fsm.get_current_state() == states::final; 
+	return _fsm.get_current_state() == polygon_drawer_states::final; 
 }
 

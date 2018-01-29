@@ -6,17 +6,14 @@
 #include <GL/freeglut.h>
 #endif
 
-using states = quad_drawer_states;
-using std::get;
-
 quad_drawer::quad_drawer() 
-	: _fsm(states::no_points)
+	: _fsm(quad_drawer_states::no_points)
 {
 	// Transitions for state system. 
-	_fsm.add_transition(states::no_points, states::first_point, triggers::lmouse_up);
-	_fsm.add_transition(states::first_point, states::second_point, triggers::lmouse_up);
-	_fsm.add_transition(states::second_point, states::third_point, triggers::lmouse_up);
-	_fsm.add_transition(states::third_point, states::final, triggers::lmouse_up);
+	_fsm.add_transition(quad_drawer_states::no_points, quad_drawer_states::first_point, triggers::lmouse_up);
+	_fsm.add_transition(quad_drawer_states::first_point, quad_drawer_states::second_point, triggers::lmouse_up);
+	_fsm.add_transition(quad_drawer_states::second_point, quad_drawer_states::third_point, triggers::lmouse_up);
+	_fsm.add_transition(quad_drawer_states::third_point, quad_drawer_states::final, triggers::lmouse_up);
 
 
 }
@@ -25,25 +22,25 @@ void quad_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case states::no_points: {
+		case quad_drawer_states::no_points: {
 			// Draw nothing. 
 		} break;
 
 		// Draw the first point and line to cursor. 
-		case states::first_point: {
+		case quad_drawer_states::first_point: {
 			point& p = _points[0];
 			glBegin(GL_LINE_STRIP);
-			glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+			glColor3f(p.color.r, p.color.g, p.color.b);
 			glVertex2f(p.x, p.y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
 		// Draw two points and line to cursor. 
-		case states::second_point: {
+		case quad_drawer_states::second_point: {
 			glBegin(GL_LINE_STRIP);
 			for(point& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glVertex2f(x, y);
@@ -51,28 +48,28 @@ void quad_drawer::draw(float x, float y) {
 		} break;
 
 		// Just draw a triangle!
-		case states::third_point: {
+		case quad_drawer_states::third_point: {
 			// draw a point we're looking at
 			glBegin(GL_TRIANGLES);
 			for(point& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glEnd();
 			// draw a line!
 			point& p = _points.back();
 			glBegin(GL_LINE_STRIP);
-			glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+			glColor3f(p.color.r, p.color.g, p.color.b);
 			glVertex2f(p.x, p.y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
-		case states::final: {
+		case quad_drawer_states::final: {
 			// draw a point we're looking at
 			glBegin(GL_QUADS);
 			for(point& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glEnd();
@@ -102,5 +99,5 @@ void quad_drawer::clear() {
 
 // We aren't complete unless we're in our final state. 
 bool quad_drawer::is_complete() { 
-	return _fsm.get_current_state() == states::final; 
+	return _fsm.get_current_state() == quad_drawer_states::final; 
 }

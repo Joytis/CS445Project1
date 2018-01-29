@@ -5,6 +5,7 @@
 #include "triggers.hpp"
 #include "gl_drawer.hpp"
 #include "../fsm/fsm.hpp"
+#include "color.hpp"
 
 enum class quad_drawer_states {
 	no_points,
@@ -20,7 +21,7 @@ private:
 	struct point {
 		float x;
 		float y;
-		std::tuple<float, float, float> color;
+		s_color color;
 	};
 
 	fsm::finite_state_system<quad_drawer_states, triggers> _fsm;

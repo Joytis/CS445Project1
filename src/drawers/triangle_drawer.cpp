@@ -8,16 +8,13 @@
 
 #include <iostream>
 
-using states = triangle_drawer_states;
-using std::get;
-
 triangle_drawer::triangle_drawer() 
-	: _fsm(states::no_points)
+	: _fsm(triangle_drawer_states::no_points)
 {
 	// Transitions for state system. 
-	_fsm.add_transition(states::no_points, states::first_point, triggers::lmouse_up);
-	_fsm.add_transition(states::first_point, states::second_point, triggers::lmouse_up);
-	_fsm.add_transition(states::second_point, states::final, triggers::lmouse_up);
+	_fsm.add_transition(triangle_drawer_states::no_points, triangle_drawer_states::first_point, triggers::lmouse_up);
+	_fsm.add_transition(triangle_drawer_states::first_point, triangle_drawer_states::second_point, triggers::lmouse_up);
+	_fsm.add_transition(triangle_drawer_states::second_point, triangle_drawer_states::final, triggers::lmouse_up);
 
 }
 
@@ -25,25 +22,25 @@ void triangle_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case states::no_points: {
+		case triangle_drawer_states::no_points: {
 			// Draw nothing. 
 		} break;
 
 		// Draw the first point and line to cursor. 
-		case states::first_point: {
+		case triangle_drawer_states::first_point: {
 			point& p = _points[0];
 			glBegin(GL_LINE_STRIP);
-			glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+			glColor3f(p.color.r, p.color.g, p.color.b);
 			glVertex2f(p.x, p.y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
 		// Draw two points and line to cursor. 
-		case states::second_point: {
+		case triangle_drawer_states::second_point: {
 			glBegin(GL_LINE_STRIP);
 			for(point& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glVertex2f(x, y);
@@ -51,11 +48,11 @@ void triangle_drawer::draw(float x, float y) {
 		} break;
 
 		// Just draw a triangle!
-		case states::final: {
+		case triangle_drawer_states::final: {
 			// draw a point we're looking at
 			glBegin(GL_TRIANGLES);
 			for(point& p : _points) {
-				glColor3f(get<0>(p.color), get<1>(p.color), get<2>(p.color));
+				glColor3f(p.color.r, p.color.g, p.color.b);
 				glVertex2f(p.x, p.y);
 			}
 			glEnd();
@@ -85,5 +82,5 @@ void triangle_drawer::clear() {
 
 // We aren't complete unless we're in our final state. 
 bool triangle_drawer::is_complete() { 
-	return _fsm.get_current_state() == states::final; 
+	return _fsm.get_current_state() == triangle_drawer_states::final; 
 }

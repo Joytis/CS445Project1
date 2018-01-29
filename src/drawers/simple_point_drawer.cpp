@@ -6,23 +6,20 @@
 #include <GL/freeglut.h>
 #endif
 
-using states = simple_point_drawer_states;
-using std::get;
-
 simple_point_drawer::simple_point_drawer(float point_size) 
-	: _fsm(states::no_points),
+	: _fsm(simple_point_drawer_states::no_points),
 	  _point_size(point_size)
 {
-	_fsm.add_transition(states::no_points, states::final, triggers::lmouse_up);
+	_fsm.add_transition(simple_point_drawer_states::no_points, simple_point_drawer_states::final, triggers::lmouse_up);
 }
 
 void simple_point_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case states::no_points: {} break;
-		case states::final: {
-			glColor3f(get<0>(_point.color), get<1>(_point.color), get<2>(_point.color));
+		case simple_point_drawer_states::no_points: {} break;
+		case simple_point_drawer_states::final: {
+			glColor3f(_point.color.r, _point.color.g, _point.color.b);
 			glPointSize(_point_size);
 			glBegin(GL_POINTS);
 			glVertex2f(_point.x, _point.y);
@@ -47,5 +44,5 @@ void simple_point_drawer::clear() {
 }
 
 bool simple_point_drawer::is_complete() {
-	return _fsm.get_current_state() == states::final;
+	return _fsm.get_current_state() == simple_point_drawer_states::final;
 }

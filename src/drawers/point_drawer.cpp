@@ -8,28 +8,25 @@
 
 #include <iostream>
 
-using std::get;
-using pds = point_drawer_states;
-
-point_drawer::point_drawer(std::tuple<float, float, float> color, float size)
+point_drawer::point_drawer(s_color color, float size)
 	: _color(color), _point_size(size), _fsm(point_drawer_states::draw_point)
 {
-	_fsm.add_transition(pds::draw_point, pds::no_point, triggers::lmouse_down);
-	_fsm.add_transition(pds::no_point, pds::draw_point, triggers::lmouse_up);
+	_fsm.add_transition(point_drawer_states::draw_point, point_drawer_states::no_point, triggers::lmouse_down);
+	_fsm.add_transition(point_drawer_states::no_point, point_drawer_states::draw_point, triggers::lmouse_up);
 }
 
 void point_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case pds::draw_point: {
-			glColor3f(get<0>(_color), get<1>(_color), get<2>(_color));
+		case point_drawer_states::draw_point: {
+			glColor3f(_color.r, _color.g, _color.b);
 			glPointSize(_point_size);
 			glBegin(GL_POINTS);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
-		case pds::no_point: {
+		case point_drawer_states::no_point: {
 			// DO nothing with no point. 
 		} break;
 	}

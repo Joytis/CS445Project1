@@ -11,23 +11,23 @@
 #include <vector>
 
 #include "drawers/drawers.hpp"
+#include "color.hpp"
 
 class glutscene {
 
 private:
-	typedef std::tuple<float, float, float> color_type;
 
-	const color_type red = { 1.0, 0.0, 0.0 };
-	const color_type orange = { 1.0, 0.64, 0.0 };
-	const color_type yellow = { 1.0, 0.95, 0.0 };
-	const color_type green = { 0.0, 1.0, 0.0 };
-	const color_type blue = { 0.0, 0.0, 1.0 };
-	const color_type purple = { 0.56, 0.0, 0.8 };
+	s_color red;
+	s_color orange;
+	s_color yellow;
+	s_color green;
+	s_color blue;
+	s_color purple;
 
 	std::pair<float, float> _canvas_size;
 	std::pair<int, int> _raster_size;
 	std::pair<float, float> _mouse_pos;
-	std::tuple<float, float, float> _current_color;
+	s_color _current_color;
 
 	point_drawer _mouse_drawer;
 
@@ -49,8 +49,8 @@ private:
 	};
 	draw_state _current_state;
 
-	float _current_width = 3.0f;
-	float _line_width = 1.0f;
+	float _current_width;
+	float _line_width;
 
 public:
 	glutscene(std::pair<float, float> c, std::pair<int, int> r);

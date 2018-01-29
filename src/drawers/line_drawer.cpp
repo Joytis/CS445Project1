@@ -8,18 +8,15 @@
 
 #include <iostream>
 
-using states = line_drawer_states;
-using std::get;
-
 line_drawer::line_drawer(float width) 
-	: _fsm(states::no_points),
+	: _fsm(line_drawer_states::no_points),
 	  _line_width(width)
 {
 
 	// Transitions for FSM
-	_fsm.add_transition(states::no_points, states::has_points, triggers::lmouse_up);
-	_fsm.add_transition(states::has_points, states::has_points, triggers::lmouse_up);
-	_fsm.add_transition(states::has_points, states::final, triggers::finalize_build);
+	_fsm.add_transition(line_drawer_states::no_points, line_drawer_states::has_points, triggers::lmouse_up);
+	_fsm.add_transition(line_drawer_states::has_points, line_drawer_states::has_points, triggers::lmouse_up);
+	_fsm.add_transition(line_drawer_states::has_points, line_drawer_states::final, triggers::finalize_build);
 
 }
 
@@ -27,12 +24,12 @@ void line_drawer::draw(float x, float y) {
 	_fsm.update();
 
 	switch(_fsm.get_current_state()) {
-		case states::no_points: {
+		case line_drawer_states::no_points: {
 			// do nothing
 		} break;
 
 		// Has points. 
-		case states::has_points: {
+		case line_drawer_states::has_points: {
     		glLineWidth(_line_width);
 			glBegin(GL_LINES);
 
@@ -40,21 +37,21 @@ void line_drawer::draw(float x, float y) {
 			auto p2 = std::next(p1);
 			while(p2 != _points.end()) {
 				// point& p = _points[i];
-				glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+				glColor3f(p1->color.r, p1->color.g, p1->color.b);
 				glVertex2f(p1->x, p1->y);
-				glColor3f(get<0>(p2->color), get<1>(p2->color), get<2>(p2->color));
+				glColor3f(p2->color.r, p2->color.g, p2->color.b);
 				glVertex2f(p2->x, p2->y);
 				p1 = p2;
 				p2 = std::next(p2);
 			}
-			glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+			glColor3f(p1->color.r, p1->color.g, p1->color.b);
 			glVertex2f(p1->x, p1->y);
 			glVertex2f(x, y);
 			glEnd();
 		} break;
 
 		// Draw without cursor
-		case states::final: {
+		case line_drawer_states::final: {
 			glLineWidth(_line_width);
 			glBegin(GL_LINES);
 
@@ -62,9 +59,9 @@ void line_drawer::draw(float x, float y) {
 			auto p2 = std::next(p1);
 			while(p2 != _points.end()) {
 				// point& p = _points[i];
-				glColor3f(get<0>(p1->color), get<1>(p1->color), get<2>(p1->color));
+				glColor3f(p1->color.r, p1->color.g, p1->color.b);
 				glVertex2f(p1->x, p1->y);
-				glColor3f(get<0>(p2->color), get<1>(p2->color), get<2>(p2->color));
+				glColor3f(p2->color.r, p2->color.g, p2->color.b);
 				glVertex2f(p2->x, p2->y);
 				p1 = p2;
 				p2 = std::next(p2);
@@ -96,6 +93,6 @@ void line_drawer::clear() {
 }
 
 bool line_drawer::is_complete() {
-	return _fsm.get_current_state() == states::final; 
+	return _fsm.get_current_state() == line_drawer_states::final; 
 }
 

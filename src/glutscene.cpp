@@ -4,13 +4,35 @@ using namespace std::placeholders;
 
 glutscene::glutscene(std::pair<float, float> c, std::pair<int, int> r) :
 	_canvas_size(c), _raster_size(r), 
-    _current_color(red),
+    // _current_color(red),
     _current_state(draw_state::triangle),
-    _current_width(5.0),
-    _line_width(5.0),
+    _current_width(3.0),
+    _line_width(1.0),
 
     _mouse_drawer(_current_color, _current_width)
 {
+    // Screw microsoft. 
+    red.r = 1.0;
+    red.g =  0.0;
+    red.b = 0.0;
+    orange.r = 1.0;
+    orange.g =  0.64;
+    orange.b = 0.0;
+    yellow.r = 1.0;
+    yellow.g =  0.95;
+    yellow.b = 0.0;
+    green.r = 0.0;
+    green.g =  1.0;
+    green.b = 0.0;
+    blue.r = 0.0;
+    blue.g =  0.0;
+    blue.b = 1.0;
+    purple.r = 0.56;
+    purple.g =  0.0;
+    purple.b = 0.8;
+
+    _current_color = red;
+
     triangle_drawer tri;
     _triangles.push_back(std::move(tri));
     _current_drawer = &(_triangles.back()); // look at the back element of this vector. 

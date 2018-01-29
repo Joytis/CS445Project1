@@ -5,11 +5,11 @@
 
 namespace fsm {
 
+typedef unsigned int u32;
+
 template<typename T, typename S>
 class finite_state_system {
 private:
-
-	using u32 = unsigned int;
 
 	class transition {
 	public:
@@ -22,7 +22,7 @@ private:
 	std::unordered_map<T, std::vector<transition>> transitions;
 
 	// Storage location for current triggers of finite state system. 
-	u32 triggers = 0;
+	u32 triggers;
 
 	// Should be an enumerated type
 	T _entry_state;
@@ -39,7 +39,7 @@ public:
 	T get_previous_state() { return _previous_state; }
 
 	finite_state_system (T entry_state) 
-		: _entry_state(entry_state), _current_state(entry_state)
+		: _entry_state(entry_state), _current_state(entry_state), triggers(0)
 	{
 		// Add entry state to map. 
 		if(transitions.find(entry_state) == transitions.end()) {
