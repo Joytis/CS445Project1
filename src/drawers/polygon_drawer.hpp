@@ -6,27 +6,29 @@
 #include "gl_drawer.hpp"
 #include "../fsm/fsm.hpp"
 
-enum class simple_point_drawer_states {
+enum class polygon_drawer_states {
 	no_points,
+	one_point,
+	has_points,
 	final
 };
 
-class simple_point_drawer : public gl_drawer {
-private:
-
+class polygon_drawer : public gl_drawer {
+private: 
+	
 	struct point {
 		float x;
 		float y;
 		std::tuple<float, float, float> color;
 	};
 
-	fsm::finite_state_system<simple_point_drawer_states, triggers> _fsm;
-	point _point;
-	float _point_size;
+	fsm::finite_state_system<polygon_drawer_states, triggers> _fsm;
+	// points
+	std::vector<point> _points;
+
 
 public:
-	simple_point_drawer(float point_size);
-
+	polygon_drawer();
 	void draw(float x, float y);
 	void send_trigger(trigger_data trig);
 	void clear();

@@ -44,6 +44,10 @@ void glutscene::display() {
         quad.draw(_mouse_pos.first, _mouse_pos.second);
     for(auto& line : _lines) 
         line.draw(_mouse_pos.first, _mouse_pos.second);
+    for(auto& point : _points) 
+        point.draw(_mouse_pos.first, _mouse_pos.second);
+    for(auto& polygon : _polygons) 
+        polygon.draw(_mouse_pos.first, _mouse_pos.second);
 
         
     if(_current_drawer->is_complete()) {
@@ -69,7 +73,6 @@ void glutscene::keyboard(unsigned char key, int x, int y) {
 
 void glutscene::mouse(int button, int state, int x, int y) {
 	if(button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
-        
         _mouse_pos.first = (float)x / _raster_size.first * _canvas_size.first;
         _mouse_pos.second = (float)(_raster_size.second - y) / _raster_size.second * _canvas_size.second;
         
@@ -124,11 +127,12 @@ void glutscene::createMenu(void (*menu)(int)) {
     glutAddMenuEntry("Largs", 32);
 
     int shapeMenu = glutCreateMenu(menu);
-    glutAddMenuEntry("Triangle", 10);
+    glutAddMenuEntry("Point", 15);
     glutAddMenuEntry("Lines", 11);
+    glutAddMenuEntry("Triangle", 10);
     glutAddMenuEntry("Quad", 12);
-    glutAddMenuEntry("Circle", 13);
     glutAddMenuEntry("Polygon", 14);
+
 
     glutCreateMenu(menu);
     glutAddSubMenu("Shapes", shapeMenu);
@@ -147,12 +151,30 @@ void glutscene::update_cursor() {
 void glutscene::menu(int value) {
     switch(value) {
         // Change current rendering color. 
-        case 00 : { _current_color = glutscene::red; } break;
-        case 01 : { _current_color = glutscene::orange; } break;
-        case 02 : { _current_color = glutscene::yellow; } break;
-        case 03 : { _current_color = glutscene::green; } break;
-        case 04 : { _current_color = glutscene::blue; } break;
-        case 05 : { _current_color = glutscene::purple; } break;
+        case 00 : { 
+            _current_color = glutscene::red; 
+            update_cursor();
+        } break;
+        case 01 : { 
+            _current_color = glutscene::orange; 
+            update_cursor();
+        } break;
+        case 02 : { 
+            _current_color = glutscene::yellow; 
+            update_cursor();
+        } break;
+        case 03 : { 
+            _current_color = glutscene::green; 
+            update_cursor();
+        } break;
+        case 04 : { 
+            _current_color = glutscene::blue; 
+            update_cursor();
+        } break;
+        case 05 : { 
+            _current_color = glutscene::purple; 
+            update_cursor();
+        } break;
 
         // Update drawing state
         case 10 : { 
@@ -167,12 +189,12 @@ void glutscene::menu(int value) {
             change_drawing_state(draw_state::quad);
             update_cursor();
         } break;
-        case 13 : { 
-            change_drawing_state(draw_state::circle);
-            update_cursor();
-        } break;
         case 14 : { 
             change_drawing_state(draw_state::polygon);
+            update_cursor();
+        } break;
+        case 15 : { 
+            change_drawing_state(draw_state::point);
             update_cursor();
         } break;
 
@@ -180,6 +202,10 @@ void glutscene::menu(int value) {
         case 20 : {
             _triangles.clear();
             _quads.clear();
+            _lines.clear();
+            _points.clear();
+            _polygons.clear();
+
             create_new_primative();
         } break;
 
@@ -204,6 +230,13 @@ void glutscene::menu(int value) {
 void glutscene::create_new_primative() {
     // Make a new shape to draw. 
     switch(_current_state) {
+        // points
+        case draw_state::point: {
+            simple_point_drawer point(_current_width);
+            _points.push_back(std::move(point));
+            _current_drawer = &(_points.back());
+        } break;
+
         // triangles 
         case draw_state::triangle: {
             triangle_drawer tri;
@@ -225,14 +258,11 @@ void glutscene::create_new_primative() {
             _current_drawer = &(_quads.back());
         } break;
 
-        // Circles
-        case draw_state::circle: {
-
-        } break;
-
         // polygons
         case draw_state::polygon: {
-
+            polygon_drawer polygon;
+            _polygons.push_back(std::move(polygon));
+            _current_drawer = &(_polygons.back());
         } break;
     }
 }
@@ -241,14 +271,14 @@ void glutscene::change_drawing_state(draw_state newstate) {
     if(!_current_drawer->is_complete()) {
         switch(_current_state) {
             case draw_state::triangle: { _triangles.pop_back(); } break;
-            case draw_state::lines: { } break;
+            case draw_state::lines: { _lines.pop_back(); } break;
             case draw_state::quad: { _quads.pop_back(); } break;
-            case draw_state::circle: {} break;
-            case draw_state::polygon: {} break;
+            case draw_state::polygon: { _polygons.pop_back(); } break;
+            case draw_state::point: { _points.pop_back(); } break;
         }
     }
-
     _current_state = newstate;
+
     create_new_primative();
 }
 

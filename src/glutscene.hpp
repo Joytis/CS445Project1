@@ -32,9 +32,12 @@ private:
 	point_drawer _mouse_drawer;
 
 	// set of triangles!
+	std::vector<simple_point_drawer> _points;
 	std::vector<triangle_drawer> _triangles;
 	std::vector<quad_drawer> _quads;
 	std::vector<line_drawer> _lines;
+	std::vector<polygon_drawer> _polygons;
+
 
 	gl_drawer* _current_drawer;
 
@@ -42,8 +45,8 @@ private:
 		triangle,
 		lines,
 		quad,
-		circle,
-		polygon
+		polygon,
+		point
 	};
 	draw_state _current_state;
 
